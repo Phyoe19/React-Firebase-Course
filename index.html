@@ -18,17 +18,34 @@
     <h1>Hello World</h1>
     <div id="main"></div>
 
-    <footer>Footer</footer>
+    <footer>Footer</footer> 
 </body>
 
 <script type="text/babel">
     const Main = () => {
-        return <div>Hello World</div>
+
+        let name = "naing win phyoe";
+        let number = 20;
+        let className = "my-class-name";
+ 
+        return (
+            // this is main section
+        <div className={className}>
+            <h1>{name.toUpperCase()}</h1>
+        <p>{number}</p>
+        <p>{new Date().toDateString()}</p>
+        
+
+        <button onClick={(e) => {
+            console.log(e)
+        }}>click me</button>
+            </div>
+            )
     }
 
     let rootContainer = document.getElementById('main');
 
-    //create react element
+    // create react element
     let e = React.createElement;
 
     //create react root element
